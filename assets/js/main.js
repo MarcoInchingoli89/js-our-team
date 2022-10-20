@@ -46,9 +46,14 @@ console.log(teamMembers);
 
 //MILESTONE 1: Stampare su console le informazioni di nome, ruolo e la stringa della foto
 
-
+for (const key in teamMembers) {
+    console.log(key);
+    console.log(teamMembers[key]);
+}
 
 //MILESTONE 2: Stampare le stesse informazioni su DOM sottoforma di stringhe
+
+
 
 //BONUS 1: Trasformare la stringa foto in una immagine effettiva
 
