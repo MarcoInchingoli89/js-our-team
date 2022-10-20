@@ -6,52 +6,69 @@
 
 const teamMembers = [
     {
-        Name: 'Wayne Barnett',
-        Role: 'Founder & CEO',
-        Image: 'wayne-barnett-founder-ceo.jpg',
+        name: 'Wayne Barnett',
+        role: 'Founder & CEO',
+        image: 'wayne-barnett-founder-ceo.jpg',
     },
 
     {
-        Name: 'Angela',
-        Role: 'Chief Editor',
-        Image: 'angela-caroll-chief-editor.jpg',
+        name: 'Angela',
+        role: 'Chief Editor',
+        image: 'angela-caroll-chief-editor.jpg',
     },
 
     {
-        Name: 'Walter Gordon',
-        Role: 'Office Manager',
-        Image: 'walter-gordon-office-manager.jpg',
+        name: 'Walter Gordon',
+        role: 'Office Manager',
+        image: 'walter-gordon-office-manager.jpg',
     },
 
     {
-        Name: 'Angela Lopez',
-        Role: 'Social Media Manager',
-        Image: 'angela-lopez.social-media-manager.jpg',
+        name: 'Angela Lopez',
+        role: 'Social Media Manager',
+        image: 'angela-lopez.social-media-manager.jpg',
     },
 
     {
-        Name: 'Scott Estrada',
-        Role: 'Developer',
-        Image: 'scott-estrada.developer.jpg',
+        name: 'Scott Estrada',
+        role: 'Developer',
+        image: 'scott-estrada.developer.jpg',
     },
 
     {
-        Name: 'Barbara Ramos',
-        Role: 'Graphic Designer',
-        Image: 'barbara-ramos.graphic-designer.jpg',
+        name: 'Barbara Ramos',
+        role: 'Graphic Designer',
+        image: 'barbara-ramos.graphic-designer.jpg',
     }
 ];
 
-console.log(teamMembers);
+//console.log(teamMembers);
 
 //MILESTONE 1: Stampare su console le informazioni di nome, ruolo e la stringa della foto
 
+//MILESTONE 2: Stampare le stesse informazioni su DOM sottoforma di stringhe
+
+const nameElement = document.querySelector('.name');
+const roleElement = document.querySelector('.role');
+const imageElement = document.querySelector('.image');
+//console.log(colElement)
+/*
 for (const key in teamMembers) {
     console.log(key);
     console.log(teamMembers[key]);
-}
+    //colElement.innerHTML(teamMembers[key]);
+}*/
 
-//MILESTONE 2: Stampare le stesse informazioni su DOM sottoforma di stringhe
+for (let i = 0; i < teamMembers.length; i++) {
+    const element = teamMembers[i];
+    console.log(element.name);
+    console.log(element.role);
+    console.log(element.image);
+
+    nameElement.innerText += " " + element.name;
+    roleElement.innerText += " " + element.role;
+    imageElement.innerText += " " + element.image;
+}
 
 
 
