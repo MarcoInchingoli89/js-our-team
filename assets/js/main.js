@@ -44,10 +44,6 @@ const teamMembers = [
 
 //console.log(teamMembers);
 
-//MILESTONE 1: Stampare su console le informazioni di nome, ruolo e la stringa della foto
-
-//MILESTONE 2: Stampare le stesse informazioni su DOM sottoforma di stringhe
-
 const nameElement = document.querySelector('.name');
 const roleElement = document.querySelector('.role');
 const imageElement = document.querySelector('.image');
@@ -59,18 +55,18 @@ for (const key in teamMembers) {
     //colElement.innerHTML(teamMembers[key]);
 }*/
 
+//MILESTONE 1: Stampare su console le informazioni di nome, ruolo e la stringa della foto
 for (let i = 0; i < teamMembers.length; i++) {
     const element = teamMembers[i];
     console.log(element.name);
     console.log(element.role);
     console.log(element.image);
 
+ //MILESTONE 2: Stampare le stesse informazioni su DOM sottoforma di stringhe   
     nameElement.innerText += " " + element.name;
     roleElement.innerText += " " + element.role;
     imageElement.innerText += " " + element.image;
 }
-
-
 
 //BONUS 1: Trasformare la stringa foto in una immagine effettiva
 
